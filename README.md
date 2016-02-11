@@ -42,7 +42,7 @@ Add these two lines to your `config.php` to exclude **single pages** and/ or **f
 $config['at_navigation']['exclude']['single'] = array('a/site', 'another/site');
 $config['at_navigation']['exclude']['folder'] = array('a/folder', 'another/folder');
 ```
-To exclude a folder without index: `another/folder/`
+To exclude the entire folder use `another/folder/` but to exclude only the folder and show the index use `another/folder`
 
 ## what it does
 
