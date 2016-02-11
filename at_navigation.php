@@ -111,7 +111,8 @@ final class AT_Navigation extends AbstractPicoPlugin
 		$exclude = $this->config['at_navigation']['exclude'];
 
 		$url = substr($page['url'], strlen($this->config['base_url']));
-		$url = (substr($url, -1) == '/') ? $url : $url.'/';
+		//Allow excluding of only the folder
+		//$url = (substr($url, -1) == '/') ? $url : $url.'/';
 
 		foreach ($exclude['single'] as $s)
 		{
@@ -126,8 +127,9 @@ final class AT_Navigation extends AbstractPicoPlugin
 
 		foreach ($exclude['folder'] as $f)
 		{
-			$f = (substr($f, -1) == '/') ? $f : $f.'/';
-			$is_index = ( $f == '' || $f == '/' ) ? true : false;
+			//Allow excluding of only the folder
+			//$f = (substr($f, -1) == '/') ? $f : $f.'/';
+			//$is_index = ( $f == '' || $f == '/' ) ? true : false;
 
 			if ( substr($url, 0, strlen($f)) == $f )
 			{
